@@ -63,4 +63,11 @@ nav.addEventListener('keypress', function(){
 
 // Set sections as active
 
+//Form submission success
+const done = document.getElementById('submit');
+done.addEventListener('click', function(){
+    document.getElementById('passwordalert').innerHTML='<span style="color:green">Submitted successfully!</span>'
+    
+})
+
 
