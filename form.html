@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <style>
+        /* input[type="email"], [type="text"]{
+            background-color: blue;
+        } */
+        fieldset{
+            border-color: aqua;
+            border-width: 3px;
+            border-style: solid;
+        }
+       legend{
+            color: rgb(3, 51, 51) ;
+        }
+        label, input{
+            display: block;
+        }
+        input, textarea, label{
+            border-radius: 7px;
+            margin-left: 500px;
+        }
+        input:focus:invalid{
+            border-color: red;
+        }
+    </style>
+</head>
+<body>
+    <form action="index.html" enctype="application/x-www-form-urlencoded" method="GET">
+       <fieldset>
+        <legend>Contact Information</legend>
+        <label>UserName:</label><input name="userName" minlength="5" maxlength = "25" type="text" required><br />
+        <label>PhoneNumber:</label><input name="Phone" pattern="\(\d{3}\) \d{3}- \d{4}" type="tel"><br />
+        <label>Password:</label><input name="password" type="password" placeholder = "xxxxxx" required>
+        <input name="severity" type="range"><br>
+        <label>Email:</label><input name="email" type="email" required><br />
+        <label>Items:</label><input name="numOfItems" min="1" max="10" type="number"><br />
+        <label>Date:</label><input name="issuedate" type="date"><br />
+        <label>Time:</label><input name="issuetime" type="time"><br />
+        <label>Feedback:</label><textarea name="feedback" cols="40"></textarea><br />
+    </fieldset>
+    <br />
+        <input type="submit" value="SendContact"><small id="passwordalert"></small>
+    </form>
+    
+</body>
+</html>

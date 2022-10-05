@@ -12,15 +12,16 @@
 <body>
   <!-- HTML Follows BEM naming conventions 
   IDs are only used for sections to connect menu achors to sections -->
+   <!-- Navigation starts as empty UL that will be populated with JS -->
   <header class="page__header">
     <nav class="navbar__menu">
-      <!-- Navigation starts as empty UL that will be populated with JS -->
-      <ul id="navbar__list"></ul>
+        <ul id="navbar__list">
+      </ul>
     </nav>
   </header>
   <main>
     <header class="main__hero">
-      <h1>Landing Page </h1>
+      <h1 id='hiy'>Muhalat Landing Page</h1>
     </header>
     <!-- Each Section has an ID (used for the anchor) and 
     a data attribute that will populate the li node.
@@ -50,10 +51,24 @@
         <p>Aliquam a convallis pjusto. Vivamus venenatis, erat eget pulvinar gravida, ipsum lacus aliquet velit, vel luctus diam ipsum a diam. Cras eu tincidunt arcu, vitae rhoncus purus. Vestibulum fermentum consectetur porttitor. Suspendisse imperdiet porttitor tortor, eget elementum tortor mollis non.</p>
       </div>
     </section>
+    <section id="form-section">
+      <form action="index.html" enctype="application/x-www-form-urlencoded" method="GET">
+        <fieldset>
+         <legend>Contact Information</legend>
+         <label>Name:</label><input name="userName" minlength="5" maxlength = "25" type="text" Placeholder="John Doe" required><br />
+         <label>Email:</label><input name="email" type="email" Placeholder="user@mail.com" required><br />
+         <label>Date:</label><input name="issuedate" type="date"><br />
+         <label>Feedback:</label><textarea name="feedback" cols="40" Placeholder="Type in your feedback..."></textarea><br />
+     </fieldset>
+     <br />
+         <input type="submit" value="Submit" id="submit"><br /><small id="passwordalert"></small>
+     </form>
+    </section>
   </main>
   <footer class="page__footer">
     <p>&copy Udacity</p>
   </footer>
-
+<script src="js/app.js"></script>
+<script src="test.js"></script>
 </body>
 </html>

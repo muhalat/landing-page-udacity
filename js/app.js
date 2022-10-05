@@ -31,7 +31,6 @@
 */
 
 
-
 /**
  * End Helper Functions
  * Begin Main Functions
@@ -39,12 +38,17 @@
 */
 
 // build the nav
+const nav = document.getElementById('navbar__list');
+nav.innerHTML='<li> <a href="#">Home</a> </li> <li> <a href="#">About</a> </li> <li> <a href="blog-post.html">Gallery</a> </li> <li> <a href="#">Contact</a> </li>'
 
-
+nav.addEventListener('keypress', function(){
+    console.log("stop touching me!!!!")
+})
 // Add class 'active' to section when near top of viewport
 
 
 // Scroll to anchor ID using scrollTO event
+
 
 
 /**
