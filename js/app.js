@@ -22,7 +22,7 @@
  * Define Global Variables
  * 
 */
-
+const sections = document.getElementsByTagName('section')
 
 /**
  * End Global Variables
@@ -62,7 +62,18 @@ nav.addEventListener('keypress', function(){
 // Scroll to section on link click
 
 // Set sections as active
+function makeActive(){
+    for (const section of sections) {
+        const box = section.getBoundingClientRect();
+        if (box.top <= 250 && box.bottom >= 0) {
+        console.log ("activeState");
+        } else {
+            console.log("inactive");
+        }
+     }
+  }
 
+document.addEventListener("scroll", function() { makeActive();});
 //Form submission success
 const done = document.getElementById('submit');
 done.addEventListener('click', function(){
