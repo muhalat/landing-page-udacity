@@ -60,7 +60,11 @@ nav.addEventListener('keypress', function(){
 // Build menu 
 
 // Scroll to section on link click
-
+nav.addEventListener('click',function(){
+    window.scrollTo( {top: 100,
+        left: 100,
+        behavior: 'smooth'})
+})
 // Set sections as active
 function makeActive(){
     for (const section of sections) {
