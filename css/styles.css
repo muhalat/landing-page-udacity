@@ -55,44 +55,64 @@ input[type="submit"]{
     cursor: pointer;
 }
 @media only screen and (min-width: 35em){
-    .navbar__menu h1 {
-        display: none;
-        font-size: 7em;
-        margin: 2em 4rem 1em;
-        color: green;
-    }
-    #toggle-nav {
-        display: none;
-        margin: auto;
-        cursor: pointer;
-     }
     .navbar__menu {
         position: relative;
         background: rgb(199, 151, 151);
         color: white;
         font-family: 'Courier New', Courier, monospace;
 }
-#navbar__list {
-       list-style: none;
-       display: flex;
-       padding: 0;
-       margin: 0;
-       background: rgb(199, 151, 151);
-       
-}
-#navbar__list a {
-      flex: auto;
-      text-align: center;
-      padding: 1.6em;
-      font-size: 18px;
+#navbar__list{
+    display: flex;
+    flex-direction: row;
 }
 #navbar__list a{
     text-decoration: none;
        color: white;
+       display: flex;
+       background: rgb(199, 151, 151);
+       text-align: center;
+       padding: 1.6em;
 }
 #navbar__list a:hover {
      text-decoration: underline;
 }
+#navbar__list a.active{
+    background-color: #000;
+}
+}
+@media screen and (max-width: 560px){
+    .navbar__menu {
+        height: 150px;
+        position: relative;
+        background: rgb(199, 151, 151);
+        color: white;
+        font-family: 'Courier New', Courier, monospace;
+}
+    #navbar__list{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    #navbar__list a{
+        text-decoration: none;
+           color: white;
+           display: flex;
+           background: rgb(199, 151, 151);
+           text-align: center;
+           padding: 1.0em;
+    }
+    #navbar__list a:hover {
+         text-decoration: underline;
+    }
+    #navbar__list a.active{
+        background-color: black;
+    }
+    form{
+        margin-top: 300px;
+    }
+    .page__footer{
+        width: 100%;
+    }
 }
 h2 {
     border-bottom: 1px solid #cc1;
@@ -116,10 +136,6 @@ main {
 section {
     position: relative;
     min-height: 80vh;
-}
-a.active {
-    color:red;
-    background-color:black;
 }
 /* ---- Module Rules ---- */
 
@@ -262,7 +278,6 @@ section.your-active-class .landing__container::before {
     opacity: 1;
     animation: rotate 4s linear 0s infinite forwards;
 }
-
 section.your-active-class .landing__container::after {
     opacity: 1;
     animation: rotate 5s linear 0s infinite forwards reverse;

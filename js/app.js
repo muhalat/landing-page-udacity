@@ -1,3 +1,4 @@
+
 /*
  * Manipulating the DOM exercise.
  * Exercise programmatically builds navigation,
@@ -71,7 +72,7 @@
              const box = section.getBoundingClientRect();
              const currentSection = section.getAttribute('id')
              const navLink = document.querySelector(`[href='#${currentSection}']`)
-             if (box.top <= 100 && box.bottom >= 0) {
+             if (box.top <= 20 && box.bottom >= 0) {
                  navLink.classList.add('active')
              } else {
                  navLink.classList.remove('active')
