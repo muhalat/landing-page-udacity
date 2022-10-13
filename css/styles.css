@@ -80,6 +80,10 @@ input[type="submit"]{
        background: rgb(199, 151, 151);
        
 }
+/* #navbar__list li a:is(:link, :active, :visited).active {
+    color:red;
+    background-color:black;
+} */
 
 #navbar__list a {
       flex: auto;
@@ -124,8 +128,10 @@ section {
     position: relative;
     min-height: 80vh;
 }
-
-
+li.active {
+    color:red;
+    background-color:black;
+}
 /* ---- Module Rules ---- */
 
 /* Navigation Styles*/
