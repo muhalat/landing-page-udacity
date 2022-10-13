@@ -80,40 +80,30 @@ input[type="submit"]{
        background: rgb(199, 151, 151);
        
 }
-/* #navbar__list li a:is(:link, :active, :visited).active {
-    color:red;
-    background-color:black;
-} */
-
 #navbar__list a {
       flex: auto;
       text-align: center;
       padding: 1.6em;
       font-size: 18px;
-      
 }
 #navbar__list a{
     text-decoration: none;
        color: white;
 }
 #navbar__list a:hover {
-     
      text-decoration: underline;
 }
 }
-
 h2 {
     border-bottom: 1px solid #cc1;
     font-family: 'Oxygen', Sans-Serif;
     font-size: 3em;
     color: #fff;
 }
-
 p {
     line-height: 1.6em;
     color: #eee;
 }
-
 /* ---- Layout Rules ---- */
 main {
     margin: 10vh 1em 10vh;
@@ -123,12 +113,11 @@ main {
     min-height: 40vh;
     padding-top: 3em;
 }
-
 section {
     position: relative;
     min-height: 80vh;
 }
-li.active {
+a.active {
     color:red;
     background-color:black;
 }
